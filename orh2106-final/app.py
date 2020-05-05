@@ -9,6 +9,9 @@ Olivia Hartzell
 orh2106
 final
 
+
+Below I use flask to create a site that uses html files in the templates folder
+and the images and objects in the static folder.
 """
 
 #import statements
@@ -18,22 +21,16 @@ from flask import Flask, render_template
 app = Flask(__name__) #creates flask app variable
 
 #static route
-@app.route("/") #if go to website in there, and go to home route, will return whatever is defined in the following func
+@app.route("/") 
 def hello():
-    return render_template("index.html") # flask will look in templates directoryof current directory
-    #return "Hello World!" #this is really html code here-
-    #for external can just use href in the html file
-    
-    #go back to html file to link to site that i made:
-    #change href and the reference
-    #for the href-- "/columbia"
+    return render_template("index.html") 
+
 
 
 @app.route("/1006-work")
 def my_site():
     return render_template("1006_stuff.html")
- #   return "<p> This is my new site! </p>"
- 
+
  
 
 
@@ -48,6 +45,5 @@ def new_site():
 if __name__ == "__main__":
     app.run()
     
-    #127.001 is same as localhost
     
-    #git init 
+    
